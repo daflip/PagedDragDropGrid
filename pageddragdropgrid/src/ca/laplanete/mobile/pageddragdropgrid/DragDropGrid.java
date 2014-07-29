@@ -248,6 +248,8 @@ public class DragDropGrid extends ViewGroup implements OnTouchListener, OnLongCl
                     View v = adapter.view(page, item);
                     v.setTag(adapter.getItemAt(page,item));
                     addView(v);
+                    if (views.indexOf(v) == -1)
+                      views.add(v); 
                 }
             }
         }
